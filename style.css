@@ -1,0 +1,394 @@
+@font-face{
+	font-family: 'Game of Thrones';
+	src:url('Game_of_Thrones.ttf');
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { box-sizing: border-box; }
+
+html, h1, h2, h3 {
+	font-weight: 300;
+}
+
+.wrapper {
+	max-width: 960px;
+	width: 80%;
+}
+
+body {
+	background: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-size: 62.5%;
+	font-family: serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.results img{
+	max-width:960px;
+}
+
+h1{
+	/* font-family: 'Helvetica Neue'; */
+	font-size:3rem;
+	text-align: center;
+	line-height:1.5;
+	margin: 0;
+	text-transform: uppercase;
+	color: #8a0903;
+}
+h1 span {
+	font-family: 'Game of Thrones';
+	font-size: 3.2rem;
+}
+
+h2{
+	font-size: 1.8rem;
+	display: flex;
+	align-items: center;
+}
+
+.card img {
+	border-radius: 50%;
+	max-width: 50px;
+	margin-right: 16px;
+	background: white;
+}
+
+.title {
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flex;
+	display: -o-inline-flex;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+}
+
+.title button {
+	background: rgba(115, 190, 200, 0.0);
+	margin: 0;
+	/* width: 240px; */
+	/* height: 80px; */
+	padding: 20px 60px;
+	font-size: 1.7rem;
+	border: 2px solid #8a0903;
+	border-radius: 3px;
+	color: #8a0903;
+	box-shadow: 0 4px 4px #8a0903;
+	position: relative;
+	letter-spacing: 3px;
+	transition: all 0.2s ease;
+}
+
+.title button:active {
+	box-shadow: 0 2px 4px #8a0903;
+	position: relative;
+	top: 2px;
+}
+
+.title button:hover {
+	background: #8a0903;
+	border: 2px solid #8a0903;
+	color: rgba(255,255,255, 1.0);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+fieldset {
+	padding: 5%;
+	border: none;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+}
+
+#question1 {
+	background: rgba(210, 82, 127,0.7);
+	box-shadow: 0 4px 4px 0 rgba(74, 27, 43, 0.7);
+}
+
+#question2 {
+	background: rgba(235, 163, 1, 0.7);
+	box-shadow: 0 4px 4px 0 rgba(84, 64, 17, 0.7);
+}
+
+#question3 {
+	background: rgba(149, 165, 166,0.7);
+	box-shadow: 0 4px 4px 0 rgba(149, 165, 166,0.7);
+}
+
+#question4 {
+	background: rgba(88, 197, 172, 0.7);
+	box-shadow: 0 4px 4px 0 rgba(58, 65, 66, 0.7);
+}
+
+#question5 {
+	background: rgba(190, 144, 212,0.7);
+	box-shadow: 0 4px 4px 0 rgba(51, 70, 66, 0.7);
+}
+
+
+fieldset h2 {
+	width: 100%;
+	color: white;
+}
+
+fieldset input {
+	visibility: hidden;
+}
+
+fieldset label {
+	padding: 16px;
+	border: 2px solid rgba(255,255,255, 1.0);
+	border-radius: 4px;
+	margin: 5px;
+	background: none;
+	color: white;
+	transition: all 0.2s ease;
+	font-size: 1.2rem;
+}
+
+fieldset label:hover {
+	cursor: pointer;
+	background: rgba(16, 179, 149, 1.0);
+	border: 2px solid rgba(16, 179, 149, 1.0);
+	color: white;
+	box-shadow: 0 2px 2px rgb(6, 68, 57);
+
+}
+
+fieldset .clicked {
+	background: rgba(16, 179, 149, 1.0);
+	border: 2px solid rgba(16, 179, 149, 1.0);
+	color: white;
+	box-shadow: 0 2px 2px rgb(6, 68, 57);
+}
+
+.card {
+	height:100vh;
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+
+.card-last {
+	height: 60vh;
+}
+
+.answers {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.next,
+.back {
+	background: rgba(115, 190, 200, 1.0);
+	margin: 0;
+	padding: 8px 16px;
+	font-size: 1.4rem;
+	border: 2px solid rgba(115, 190, 200, 1.0);
+	border-radius: 3px;
+	color: rgba(255,255,255, 1.0);
+	box-shadow: 0 3px 0 rgba(74,127,134,1.0);
+	position: relative;
+}
+
+.next:active,
+.back:active {
+	top: 2px;
+	box-shadow: 0 1px 0 #61a2ab;
+	border: 2px solid rgba(115, 190, 200, 1.0);
+	background: #61a2ab;
+	/* box-shadow: 0 3px 0 #61a2ab; */
+}
+
+.next:hover,
+.back:hover {
+	background: #61a2ab;
+	color: rgba(255,255,255, 1.0);
+	border: 2px solid #61a2ab;
+	/* box-shadow: 0 3px 0 #61a2ab; */
+}
+
+.next {
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+.next-show{
+	visibility: visible;
+	opacity:1;
+}
+
+.flow {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 25px;
+}
+
+.flowstart {
+	justify-content: flex-end;
+}
+
+input[type=submit] {
+	margin: 5vh 0 25vh 0;
+	/* padding: 0 20px; */
+	/* height: 70px; */
+	background: #8a0903;
+	/* font-size: 18px; */
+	border: 2px solid #8a0903;
+	border-radius: 3px;
+	color: rgba(255,255,255, 1.0);
+	box-shadow: 0 3px 0 #330402;
+	position: relative;
+	display: none;
+	padding: 20px 60px;
+	font-size: 1.2rem;
+	/* letter-spacing: 1px; */
+	text-transform: uppercase;
+}
+
+input[type=submit]:active {
+	top: 2px;
+	box-shadow: 0 1px 0 rgba(74,127,134,1.0);
+}
+
+.results {
+	height:100vh;
+	width:100%;
+	background: #f9f9f9;
+	text-align: center;
+	display: none;
+	padding-top:5%;
+}
+
+.results button {
+	text-transform: uppercase;
+}
+
+.results h1,
+.results h2 {
+	color: #8a0903;
+	font-family: 'Game of Thrones';
+	font-size:2.5rem;
+}
+
+.show {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.reset {
+	font-size: 1rem;
+	width: initial;
+	height: initial;
+	padding: 5px 12px;
+	margin: 10px 0;
+	background: white;
+	color: #8a0903;
+	box-shadow: 0 2px 2px rgb(84, 51, 44);
+	border-radius: 3px;
+	border: none;
+	position: relative;
+}
+
+button.reset.link:active {
+	top: 1px;
+}
+
+
+  /* ************* */
+ /* Media Queries */
+/* ************* */
+@media screen and (min-width: 1281px) {
+
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 940px) {
+	.card-last {
+	    height: 72vh;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	h2 {
+		font-size: 1.3rem;
+	}
+
+	fieldset label {
+		padding: 11px;
+		font-size: 1rem;
+	}
+
+	.next, .back {
+		font-size: 1rem;
+	}
+
+	.card-last {
+	    height: 75vh;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	h2 {
+		font-size: 1.3rem;
+	}
+
+	fieldset label {
+		padding: 11px;
+		font-size: 1rem;
+		margin: 2px;
+	}
+
+	.next, .back {
+		font-size: 1rem;
+	}
+
+	.card-last {
+	    height: 75vh;
+	}
+}
+

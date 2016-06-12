@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<title>Which GoT House are you?</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="title">
+			<h1>Find Your<br><span>Game of Thrones</span><br>House</h1>
+			<a class="link" href="#card1"><button>START</button></a>
+		</div>
+		<form action="">
+			<div id="card1" class="card">
+				<fieldset class="questions" id="question1">
+					<h2><img src="images/power.png" alt="">What would you do to become the King or the Queen?</h2>
+					<div class="answers">
+						<label for="burn">Burn a Village</label>
+						<input data-value="targaryen" type="radio" id="burn" name="power" value="burn">
+						<label for="bribe">Bribe an Official</label>
+						<input data-value="lannister" type="radio" id="bribe" name="power" value="bribe">
+						<label for="marry">Marry someone you don't love</label>
+						<input data-value="stark" type="radio" id="marry" name="power" value="marry">
+						<label for="throwBack">Even if it was given to me, I'd throw it back</label>
+						<input data-value="wildling" type="radio" id="throwBack" name="power" value="throwBack">
+						<label for="poison">Poison the current king</label>
+						<input data-value="martell" type="radio" id="poison" name="power" value="poison">
+						<label for="sacrifice">Sacrifice your best friend</label>
+						<input data-value="greyjoy" type="radio" id="sacrifice" name="power" value="sacrifice">
+					</div>
+					<div class="flow flowstart">
+						<a href="#card2" class="next link">Next</a>
+					</div>
+				</fieldset>
+			</div>
+			<div id="card2" class="card">
+				<fieldset id="question2" class="questions">
+					<h2><img src="images/map.png" alt="">Where would you like to live?</h2>
+					<div class="answers">			
+						<label  for="hot">Somewhere hot</label>
+						<input data-value="martell" type="radio" id="hot" name="climate" value="hot">
+						<label  for="cold">Cold</label>
+						<input data-value="stark" type="radio" id="cold" name="climate" value="cold">
+						<label for="temperate">Temperate</label>
+						<input data-value="greyjoy" type="radio" id="temperate" name="climate" value="temperate">
+						<label for="beach">Beach</label>
+						<input data-value="lannister" type="radio" id="beach" name="climate" value="beach">
+						<label for="desert">Desert</label>
+						<input data-value="targaryen" type="radio" id="desert" name="climate" value="desert">
+						<label for="anywhere">It doesn't matter to me</label>
+						<input data-value="wildling" type="radio" id="anywhere" name="climate" value="anywhere">
+					</div>	
+					<div class="flow">
+						<a href="#card1" class="back link">Back</a>			
+						<a href="#card3" class="next link">Next</a>		
+					</div>
+				</fieldset>
+			</div>
+			<div id="card3" class="card">
+				<fieldset id="question3" class="questions">
+					<h2><img src="images/grow.png" alt="">If you were the King or the Queen, what would you do?</h2>
+					<div class="answers">
+						<label for="grow">Look for more power</label>
+						<input data-value="targaryen" type="radio" id="grow" name="action" value="grow">
+						<label for="party">Throw a party</label>
+						<input data-value="wildling" type="radio" id="party" name="action" value="party">
+						<label for="help">Help the poor</label>
+						<input data-value="stark" type="radio" id="help" name="action" value="help">
+						<label for="defend">Invest in National Defense</label>
+						<input data-value="greyjoy" type="radio" id="defend" name="action" value="defend">
+						<label for="manipulate">Manipulate people</label>
+						<input data-value="lannister" type="radio" id="manipulate" name="action" value="manipulate">
+						<label for="love">Make everyone fall in love with me</label>
+						<input data-value="martell" type="radio" id="love" name="action" value="love">
+					</div>	
+					<div class="flow">
+						<a href="#card2" class="back link">Back</a>						
+						<a href="#card4" class="next link">Next</a>		
+					</div>	
+				</fieldset>
+			</div>
+			<div id="card4" class="card">
+				<fieldset id="question4" class="questions">
+					<h2><img src="images/picnic.png" alt="">If you had to spend a day with your family, what would you do?</h2>
+					<div class="answers">
+						<label for="picnic">Go on a picnic</label>
+						<input data-value="stark" type="radio" id="picnic" name="family" value="picnic">
+						<label for="games">Play board games</label>
+						<input data-value="targaryen" type="radio" id="games" name="family" value="games">
+						<label for="nothing">I wouldn't spend a day with them</label>
+						<input data-value="lannister" type="radio" id="nothing" name="family" value="nothing">
+						<label for="trip">Go on a day trip</label>
+						<input data-value="wildling" type="radio" id="trip" name="family" value="trip">
+						<label for="fishing">Go on a fishing trip</label>
+						<input data-value="greyjoy" type="radio" id="fishing" name="family" value="fishing">
+						<label for="park">Walk through the park</label>
+						<input data-value="martell" type="radio" id="park" name="family" value="park">
+					</div>	
+					<div class="flow">
+						<a href="#card3" class="back link">Back</a>
+					</div>			
+				</fieldset>
+			</div>
+			<input type="submit" value="Reveal my house">
+		</form>
+	</div>
+			<section class="results" id="results">
+
+			</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$('.link').smoothScroll();
+	</script>
+</body>
+</html>
