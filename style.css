@@ -388,7 +388,10 @@ button.reset.link:active {
 	}
 
 	.card-last {
-	    height: 75vh;
+		height: 75vh;
+	}
+	.results h2 {
+		font-size: 1.5rem;
 	}
 }
 
